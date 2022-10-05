@@ -1,0 +1,17 @@
+<div class="newsfeed-component" data-cmp-is="newsfeed">
+    <div class="newsfeed-item" data-sly-use.model="com.anf.core.models.NewsFeedModel">
+        <ul data-sly-list="${model.newsFeedBean}">
+
+        <li  style="list-style-type: none;">
+
+		<h1> <a href="${item.url @ context = 'uri'}" ><img src="${item.urlImage @ context = 'uri'}" style="width: 100px; height: 100px">${item.title}</a></h1> 
+        	<h3>${item.author}</h3>
+
+            <p>${item.description @ context = 'html'}</p>
+            <p>${item.content @ ontext = 'html'}</p>
+
+        </li>
+
+    </ul> 
+    </div>
+</div>
